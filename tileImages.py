@@ -2,13 +2,13 @@ from PIL import Image, ImageDraw
 import os, math
 
 imageDir = "./images/" # todo -it would be nice to get this from the command line
+(smallW, smallH) = (80, 40) # todo - get image size
 
 
 imageLookup = open("./imageLookup.json", "w")
 imageLookup.write("{\n")
 outName = "./tiledImg.png"
 
-(smallW, smallH) = (80, 40)
 imageFiles = os.listdir(imageDir)
 imageFiles = [file for file in imageFiles if file[-4:] == ".png"]
 numImages = len(imageFiles)
