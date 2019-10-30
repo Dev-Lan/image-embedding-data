@@ -1,4 +1,11 @@
 [
-	{"folderName": "dots", "displayName": "Simple Test","imageWidth": 80, "imageHeight": 40}
-	// new data must be added here (don't forget to include a comma to previous elements)
+	{
+		"folderName": "dots", "displayName": "Simple Test", "imageWidth": 80, "imageHeight": 40,
+		"projectionList":
+		[
+			{ "filename": "pointList.json", "displayName": "One to One" }
+		]
+	}
+
+
 ]
