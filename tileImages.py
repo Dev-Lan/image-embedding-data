@@ -2,7 +2,7 @@ from PIL import Image, ImageDraw
 import os, math
 
 imageDir = "./images/" # todo -it would be nice to get this from the command line
-(smallW, smallH) = (80, 40) # todo - get image size
+(smallW, smallH) = (80, 80) # todo - get image size
 
 
 imageLookup = open("./imageLookup.json", "w")
