@@ -35,7 +35,9 @@
 			{ "filename": "B-pca_1&4.json", "displayName": "B PCA 1 & 4" },
 			{ "filename": "B-pca_2&3.json", "displayName": "B PCA 2 & 3" },
 			{ "filename": "B-pca_2&4.json", "displayName": "B PCA 2 & 4" },
-			{ "filename": "B-pca_3&4.json", "displayName": "B PCA 3 & 4" }
+			{ "filename": "B-pca_3&4.json", "displayName": "B PCA 3 & 4" },
+			{ "filename": "C-pca_1&2.json", "displayName": "C" },
+			{ "filename": "D-pca_1&2.json", "displayName": "D" }
 		]
 	}
 ]
