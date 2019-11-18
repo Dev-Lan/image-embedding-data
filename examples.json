@@ -1,20 +1,6 @@
 [
 	{
-		"folderName": "dots", "displayName": "Test 1", "imageWidth": 80, "imageHeight": 40,
-		"projectionList":
-		[
-			{ "filename": "pointList.json", "displayName": "One to One" }
-		]
-	},
-	{
-		"folderName": "square", "displayName": "Test 2", "imageWidth": 80, "imageHeight": 80,
-		"projectionList":
-		[
-			{ "filename": "pointList.json", "displayName": "One to One" }
-		]
-	},
-	{
-		"folderName": "dotsWithAttributes", "displayName": "Test 3", "imageWidth": 80, "imageHeight": 80,
+		"folderName": "dotsWithAttributes", "displayName": "Test", "imageWidth": 80, "imageHeight": 80,
 		"projectionList":
 		[
 			{ "filename": "pointList.json", "displayName": "One to One" }
