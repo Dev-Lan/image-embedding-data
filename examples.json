@@ -23,7 +23,14 @@
 			{ "filename": "B-pca_2&4.json", "displayName": "B PCA 2 & 4" },
 			{ "filename": "B-pca_3&4.json", "displayName": "B PCA 3 & 4" },
 			{ "filename": "C-pca_1&2.json", "displayName": "C" },
-			{ "filename": "D-pca_1&2.json", "displayName": "D" }
+			{ "filename": "D-pca_1&2.json", "displayName": "D" },
+			{ "filename": "performance_1&2.json", "displayName": "Perf. PCA 1 & 2" },
+			{ "filename": "performance_1&3.json", "displayName": "Perf. PCA 1 & 3" },
+			{ "filename": "performance_1&4.json", "displayName": "Perf. PCA 1 & 4" },
+			{ "filename": "performance_2&3.json", "displayName": "Perf. PCA 2 & 3" },
+			{ "filename": "performance_2&4.json", "displayName": "Perf. PCA 2 & 4" },
+			{ "filename": "performance_3&4.json", "displayName": "Perf. PCA 3 & 4" }
+
 		]
 	}
 ]
