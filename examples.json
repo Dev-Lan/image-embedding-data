@@ -7,6 +7,17 @@
 		]
 	},
 	{
+		"folderName": "fullParticle", "displayName": "Particle - All",  "imageWidth": 270, "imageHeight": 90,
+		"projectionList":
+		[
+			{ "filename": "layer-1_pca12.json", "displayName": "Layer 1" },
+			{ "filename": "layer-2_pca12.json", "displayName": "Layer 2" },
+			{ "filename": "layer-3_pca12.json", "displayName": "Layer 3" },
+			{ "filename": "layer-4_pca12.json", "displayName": "Layer 4" },
+			{ "filename": "layer-5_pca12.json", "displayName": "Layer 5" }
+		]
+	},
+	{
 		"folderName": "Absorption", "displayName": "Particle - Absorption",  "imageWidth": 270, "imageHeight": 90,
 		"projectionList":
 		[
