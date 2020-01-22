@@ -14,7 +14,8 @@
 			{ "filename": "layer-2_pca12.json", "displayName": "Layer 2" },
 			{ "filename": "layer-3_pca12.json", "displayName": "Layer 3" },
 			{ "filename": "layer-4_pca12.json", "displayName": "Layer 4" },
-			{ "filename": "layer-5_pca12.json", "displayName": "Layer 5" }
+			{ "filename": "layer-5_pca12.json", "displayName": "Layer 5" },
+			{ "filename": "justPCA.json", "displayName": "Just PCA" }
 		]
 	},
 	{
