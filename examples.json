@@ -7,7 +7,7 @@
 		]
 	},
 	{
-		"folderName": "Absorption", "displayName": "Particle - Absorption",  "imageWidth": 64, "imageHeight": 64,
+		"folderName": "Absorption", "displayName": "Particle - Absorption",  "imageWidth": 270, "imageHeight": 90,
 		"projectionList":
 		[
 			{ "filename": "layer-1_pca12.json", "displayName": "Layer 1" },
@@ -18,7 +18,7 @@
 		]
 	},
 	{
-		"folderName": "Avg_field", "displayName": "Particle - Average Field",  "imageWidth": 64, "imageHeight": 64,
+		"folderName": "Avg_field", "displayName": "Particle - Average Field",  "imageWidth": 270, "imageHeight": 90,
 		"projectionList":
 		[
 			{ "filename": "layer-1_pca12.json", "displayName": "Layer 1" },
@@ -29,7 +29,7 @@
 		]
 	},
 	{
-		"folderName": "Max_field", "displayName": "Particle - Max Field",  "imageWidth": 64, "imageHeight": 64,
+		"folderName": "Max_field", "displayName": "Particle - Max Field",  "imageWidth": 270, "imageHeight": 90,
 		"projectionList":
 		[
 			{ "filename": "layer-1_pca12.json", "displayName": "Layer 1" },
@@ -40,7 +40,7 @@
 		]
 	},
 	{
-		"folderName": "Extinction", "displayName": "Particle - Extinction",  "imageWidth": 64, "imageHeight": 64,
+		"folderName": "Extinction", "displayName": "Particle - Extinction",  "imageWidth": 270, "imageHeight": 90,
 		"projectionList":
 		[
 			{ "filename": "layer-1_pca12.json", "displayName": "Layer 1" },
@@ -51,7 +51,7 @@
 		]
 	},
 	{
-		"folderName": "Scattering", "displayName": "Particle - Scattering",  "imageWidth": 64, "imageHeight": 64,
+		"folderName": "Scattering", "displayName": "Particle - Scattering",  "imageWidth": 270, "imageHeight": 90,
 		"projectionList":
 		[
 			{ "filename": "layer-1_pca12.json", "displayName": "Layer 1" },
