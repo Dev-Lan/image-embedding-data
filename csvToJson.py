@@ -16,9 +16,7 @@ def main():
         print('Processing File: ' + filename)
         baseName, extension = os.path.splitext(filename)
         if extension in {'.txt', '.csv'}:
-            print('\tAdding new JSON file')
             addFile(IN_FOLDER + filename, topLevelStructure)
-            print('\tMoving file to processed folder')
             shutil.move(IN_FOLDER + filename, PROCESSED_FOLDER + filename)
 
     saveTopLevelStructure(topLevelStructure)
@@ -44,7 +42,6 @@ def addFile(filename: str, topLevelStructure: List) -> None:
         line = csvFile.readline()
         count += 1
         
-    print(count)
     csvFile.close()
     csvFile = open(IN_FOLDER + baseName, 'rt')
     csvToJson(csvFile, count, folderName + "/" + projectionFilename)
@@ -131,7 +128,7 @@ def csvToJson(csvFile, numRows: int, outFilename: str) -> None:
         line = csvFile.readline()
 
     outFile = open(outFilename, 'w')
-    outFile.write(json.dumps(jsonList, indent=4))
+    outFile.write(json.dumps(jsonList))
     return
 
 if __name__ == "__main__":
