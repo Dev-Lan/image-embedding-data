@@ -1,121 +1,354 @@
 [
-	{
-		"folderName": "dotsWithAttributes", "displayName": "Test", "imageWidth": 80, "imageHeight": 80,
-		"projectionList":
-		[
-			{ "filename": "pointList.json", "displayName": "One to One" }
-		]
-	},
-	{
-		"folderName": "fullParticle", "displayName": "Particle - All",  "imageWidth": 270, "imageHeight": 90,
-		"projectionList":
-		[
-			{ "filename": "layer-1_pca12.json", "displayName": "L1 [64]" },
-			{ "filename": "layer-2_pca12.json", "displayName": "L2 [512]" },
-			{ "filename": "layer-3_pca12.json", "displayName": "L3 [2048]" },
-			{ "filename": "layer-4_pca12.json", "displayName": "L4 [512]" },
-			{ "filename": "layer-5_pca12.json", "displayName": "L5 [64]" },
-			{ "filename": "justPCA.json", "displayName": "Just PCA" }
-		]
-	},
-	{
-		"folderName": "Absorption", "displayName": "Particle - Absorption",  "imageWidth": 270, "imageHeight": 90,
-		"projectionList":
-		[
-			{ "filename": "layer-1_pca12.json", "displayName": "L1 [64]" },
-			{ "filename": "layer-2_pca12.json", "displayName": "L2 [512]" },
-			{ "filename": "layer-3_pca12.json", "displayName": "L3 [2048]" },
-			{ "filename": "layer-4_pca12.json", "displayName": "L4 [512]" },
-			{ "filename": "layer-5_pca12.json", "displayName": "L5 [64]" }
-		]
-	},
-	{
-		"folderName": "Avg_field", "displayName": "Particle - Average Field",  "imageWidth": 270, "imageHeight": 90,
-		"projectionList":
-		[
-			{ "filename": "layer-1_pca12.json", "displayName": "L1 [64]" },
-			{ "filename": "layer-2_pca12.json", "displayName": "L2 [512]" },
-			{ "filename": "layer-3_pca12.json", "displayName": "L3 [2048]" },
-			{ "filename": "layer-4_pca12.json", "displayName": "L4 [512]" },
-			{ "filename": "layer-5_pca12.json", "displayName": "L5 [64]" }
-		]
-	},
-	{
-		"folderName": "Max_field", "displayName": "Particle - Max Field",  "imageWidth": 270, "imageHeight": 90,
-		"projectionList":
-		[
-			{ "filename": "layer-1_pca12.json", "displayName": "L1 [64]" },
-			{ "filename": "layer-2_pca12.json", "displayName": "L2 [512]" },
-			{ "filename": "layer-3_pca12.json", "displayName": "L3 [2048]" },
-			{ "filename": "layer-4_pca12.json", "displayName": "L4 [512]" },
-			{ "filename": "layer-5_pca12.json", "displayName": "L5 [64]" }
-		]
-	},
-	{
-		"folderName": "Extinction", "displayName": "Particle - Extinction",  "imageWidth": 270, "imageHeight": 90,
-		"projectionList":
-		[
-			{ "filename": "layer-1_pca12.json", "displayName": "L1 [64]" },
-			{ "filename": "layer-2_pca12.json", "displayName": "L2 [512]" },
-			{ "filename": "layer-3_pca12.json", "displayName": "L3 [2048]" },
-			{ "filename": "layer-4_pca12.json", "displayName": "L4 [512]" },
-			{ "filename": "layer-5_pca12.json", "displayName": "L5 [64]" }
-		]
-	},
-	{
-		"folderName": "Scattering", "displayName": "Particle - Scattering",  "imageWidth": 270, "imageHeight": 90,
-		"projectionList":
-		[
-			{ "filename": "layer-1_pca12.json", "displayName": "L1 [64]" },
-			{ "filename": "layer-2_pca12.json", "displayName": "L2 [512]" },
-			{ "filename": "layer-3_pca12.json", "displayName": "L3 [2048]" },
-			{ "filename": "layer-4_pca12.json", "displayName": "L4 [512]" },
-			{ "filename": "layer-5_pca12.json", "displayName": "L5 [64]" }
-		]
-	},
-	{
-		"folderName": "truss", "displayName": "Computer Generated Truss Designs", "imageWidth": 80, "imageHeight": 40,
-		"projectionList":
-		[
-			{ "filename": "A-pca_1&2.json", "displayName": "A PCA 1 & 2" },
-			{ "filename": "A-pca_1&3.json", "displayName": "A PCA 1 & 3" },
-			{ "filename": "A-pca_1&4.json", "displayName": "A PCA 1 & 4" },
-			{ "filename": "A-pca_2&3.json", "displayName": "A PCA 2 & 3" },
-			{ "filename": "A-pca_2&4.json", "displayName": "A PCA 2 & 4" },
-			{ "filename": "A-pca_3&4.json", "displayName": "A PCA 3 & 4" },
-
-			{ "filename": "B-pca_1&2.json", "displayName": "B PCA 1 & 2" },
-			{ "filename": "B-pca_1&3.json", "displayName": "B PCA 1 & 3" },
-			{ "filename": "B-pca_1&4.json", "displayName": "B PCA 1 & 4" },
-			{ "filename": "B-pca_2&3.json", "displayName": "B PCA 2 & 3" },
-			{ "filename": "B-pca_2&4.json", "displayName": "B PCA 2 & 4" },
-			{ "filename": "B-pca_3&4.json", "displayName": "B PCA 3 & 4" },
-
-			{ "filename": "C-pca_1&2.json", "displayName": "C" },
-
-			{ "filename": "performance_1&2.json", "displayName": "Perf. PCA 1 & 2" },
-			{ "filename": "performance_1&3.json", "displayName": "Perf. PCA 1 & 3" },
-			{ "filename": "performance_1&4.json", "displayName": "Perf. PCA 1 & 4" },
-			{ "filename": "performance_2&3.json", "displayName": "Perf. PCA 2 & 3" },
-			{ "filename": "performance_2&4.json", "displayName": "Perf. PCA 2 & 4" },
-			{ "filename": "performance_3&4.json", "displayName": "Perf. PCA 3 & 4" },
-
-			{ "filename": "Pad-A-pca_1&2.json", "displayName": "PAD A PCA 1 & 2" },
-			{ "filename": "Pad-A-pca_1&3.json", "displayName": "PAD A PCA 1 & 3" },
-			{ "filename": "Pad-A-pca_1&4.json", "displayName": "PAD A PCA 1 & 4" },
-			{ "filename": "Pad-A-pca_2&3.json", "displayName": "PAD A PCA 2 & 3" },
-			{ "filename": "Pad-A-pca_2&4.json", "displayName": "PAD A PCA 2 & 4" },
-			{ "filename": "Pad-A-pca_3&4.json", "displayName": "PAD A PCA 3 & 4" },
-
-			{ "filename": "Pad-B-pca_1&2.json", "displayName": "PAD B PCA 1 & 2" },
-			{ "filename": "Pad-B-pca_1&3.json", "displayName": "PAD B PCA 1 & 3" },
-			{ "filename": "Pad-B-pca_1&4.json", "displayName": "PAD B PCA 1 & 4" },
-			{ "filename": "Pad-B-pca_2&3.json", "displayName": "PAD B PCA 2 & 3" },
-			{ "filename": "Pad-B-pca_2&4.json", "displayName": "PAD B PCA 2 & 4" },
-			{ "filename": "Pad-B-pca_3&4.json", "displayName": "PAD B PCA 3 & 4" },
-
-			{ "filename": "Pad-C-pca_1&2.json", "displayName": "PAD C" }
-
-		]
-	}
+    {
+        "folderName": "dotsWithAttributes",
+        "displayName": "Test",
+        "imageWidth": 80,
+        "imageHeight": 80,
+        "projectionList": [
+            {
+                "filename": "pointList.json",
+                "displayName": "One to One"
+            }
+        ]
+    },
+    {
+        "displayName": "Particles (2)",
+        "folderName": "Particles%20%282%29",
+        "imageWidth": 270,
+        "imageHeight": 90,
+        "projectionList": [
+            {
+                "displayName": "All",
+                "filename": "All_Performance.json"
+            },
+            {
+                "displayName": "Absorption",
+                "filename": "Absorption.json"
+            },
+            {
+                "displayName": "Avg_Field",
+                "filename": "Avg_Field.json"
+            },
+            {
+                "displayName": "Scattering",
+                "filename": "Scattering.json"
+            },
+            {
+                "displayName": "Extinction",
+                "filename": "Extinction.json"
+            },
+            {
+                "displayName": "Max_Field",
+                "filename": "Max_Field.json"
+            }
+        ]
+    },
+    {
+        "folderName": "fullParticle",
+        "displayName": "Particle - All",
+        "imageWidth": 270,
+        "imageHeight": 90,
+        "projectionList": [
+            {
+                "filename": "layer-1_pca12.json",
+                "displayName": "L1 [64]"
+            },
+            {
+                "filename": "layer-2_pca12.json",
+                "displayName": "L2 [512]"
+            },
+            {
+                "filename": "layer-3_pca12.json",
+                "displayName": "L3 [2048]"
+            },
+            {
+                "filename": "layer-4_pca12.json",
+                "displayName": "L4 [512]"
+            },
+            {
+                "filename": "layer-5_pca12.json",
+                "displayName": "L5 [64]"
+            },
+            {
+                "filename": "justPCA.json",
+                "displayName": "Just PCA"
+            }
+        ]
+    },
+    {
+        "folderName": "Absorption",
+        "displayName": "Particle - Absorption",
+        "imageWidth": 270,
+        "imageHeight": 90,
+        "projectionList": [
+            {
+                "filename": "layer-1_pca12.json",
+                "displayName": "L1 [64]"
+            },
+            {
+                "filename": "layer-2_pca12.json",
+                "displayName": "L2 [512]"
+            },
+            {
+                "filename": "layer-3_pca12.json",
+                "displayName": "L3 [2048]"
+            },
+            {
+                "filename": "layer-4_pca12.json",
+                "displayName": "L4 [512]"
+            },
+            {
+                "filename": "layer-5_pca12.json",
+                "displayName": "L5 [64]"
+            }
+        ]
+    },
+    {
+        "folderName": "Avg_field",
+        "displayName": "Particle - Average Field",
+        "imageWidth": 270,
+        "imageHeight": 90,
+        "projectionList": [
+            {
+                "filename": "layer-1_pca12.json",
+                "displayName": "L1 [64]"
+            },
+            {
+                "filename": "layer-2_pca12.json",
+                "displayName": "L2 [512]"
+            },
+            {
+                "filename": "layer-3_pca12.json",
+                "displayName": "L3 [2048]"
+            },
+            {
+                "filename": "layer-4_pca12.json",
+                "displayName": "L4 [512]"
+            },
+            {
+                "filename": "layer-5_pca12.json",
+                "displayName": "L5 [64]"
+            }
+        ]
+    },
+    {
+        "folderName": "Max_field",
+        "displayName": "Particle - Max Field",
+        "imageWidth": 270,
+        "imageHeight": 90,
+        "projectionList": [
+            {
+                "filename": "layer-1_pca12.json",
+                "displayName": "L1 [64]"
+            },
+            {
+                "filename": "layer-2_pca12.json",
+                "displayName": "L2 [512]"
+            },
+            {
+                "filename": "layer-3_pca12.json",
+                "displayName": "L3 [2048]"
+            },
+            {
+                "filename": "layer-4_pca12.json",
+                "displayName": "L4 [512]"
+            },
+            {
+                "filename": "layer-5_pca12.json",
+                "displayName": "L5 [64]"
+            }
+        ]
+    },
+    {
+        "folderName": "Extinction",
+        "displayName": "Particle - Extinction",
+        "imageWidth": 270,
+        "imageHeight": 90,
+        "projectionList": [
+            {
+                "filename": "layer-1_pca12.json",
+                "displayName": "L1 [64]"
+            },
+            {
+                "filename": "layer-2_pca12.json",
+                "displayName": "L2 [512]"
+            },
+            {
+                "filename": "layer-3_pca12.json",
+                "displayName": "L3 [2048]"
+            },
+            {
+                "filename": "layer-4_pca12.json",
+                "displayName": "L4 [512]"
+            },
+            {
+                "filename": "layer-5_pca12.json",
+                "displayName": "L5 [64]"
+            }
+        ]
+    },
+    {
+        "folderName": "Scattering",
+        "displayName": "Particle - Scattering",
+        "imageWidth": 270,
+        "imageHeight": 90,
+        "projectionList": [
+            {
+                "filename": "layer-1_pca12.json",
+                "displayName": "L1 [64]"
+            },
+            {
+                "filename": "layer-2_pca12.json",
+                "displayName": "L2 [512]"
+            },
+            {
+                "filename": "layer-3_pca12.json",
+                "displayName": "L3 [2048]"
+            },
+            {
+                "filename": "layer-4_pca12.json",
+                "displayName": "L4 [512]"
+            },
+            {
+                "filename": "layer-5_pca12.json",
+                "displayName": "L5 [64]"
+            }
+        ]
+    },
+    {
+        "folderName": "truss",
+        "displayName": "Computer Generated Truss Designs",
+        "imageWidth": 80,
+        "imageHeight": 40,
+        "projectionList": [
+            {
+                "filename": "A-pca_1&2.json",
+                "displayName": "A PCA 1 & 2"
+            },
+            {
+                "filename": "A-pca_1&3.json",
+                "displayName": "A PCA 1 & 3"
+            },
+            {
+                "filename": "A-pca_1&4.json",
+                "displayName": "A PCA 1 & 4"
+            },
+            {
+                "filename": "A-pca_2&3.json",
+                "displayName": "A PCA 2 & 3"
+            },
+            {
+                "filename": "A-pca_2&4.json",
+                "displayName": "A PCA 2 & 4"
+            },
+            {
+                "filename": "A-pca_3&4.json",
+                "displayName": "A PCA 3 & 4"
+            },
+            {
+                "filename": "B-pca_1&2.json",
+                "displayName": "B PCA 1 & 2"
+            },
+            {
+                "filename": "B-pca_1&3.json",
+                "displayName": "B PCA 1 & 3"
+            },
+            {
+                "filename": "B-pca_1&4.json",
+                "displayName": "B PCA 1 & 4"
+            },
+            {
+                "filename": "B-pca_2&3.json",
+                "displayName": "B PCA 2 & 3"
+            },
+            {
+                "filename": "B-pca_2&4.json",
+                "displayName": "B PCA 2 & 4"
+            },
+            {
+                "filename": "B-pca_3&4.json",
+                "displayName": "B PCA 3 & 4"
+            },
+            {
+                "filename": "C-pca_1&2.json",
+                "displayName": "C"
+            },
+            {
+                "filename": "performance_1&2.json",
+                "displayName": "Perf. PCA 1 & 2"
+            },
+            {
+                "filename": "performance_1&3.json",
+                "displayName": "Perf. PCA 1 & 3"
+            },
+            {
+                "filename": "performance_1&4.json",
+                "displayName": "Perf. PCA 1 & 4"
+            },
+            {
+                "filename": "performance_2&3.json",
+                "displayName": "Perf. PCA 2 & 3"
+            },
+            {
+                "filename": "performance_2&4.json",
+                "displayName": "Perf. PCA 2 & 4"
+            },
+            {
+                "filename": "performance_3&4.json",
+                "displayName": "Perf. PCA 3 & 4"
+            },
+            {
+                "filename": "Pad-A-pca_1&2.json",
+                "displayName": "PAD A PCA 1 & 2"
+            },
+            {
+                "filename": "Pad-A-pca_1&3.json",
+                "displayName": "PAD A PCA 1 & 3"
+            },
+            {
+                "filename": "Pad-A-pca_1&4.json",
+                "displayName": "PAD A PCA 1 & 4"
+            },
+            {
+                "filename": "Pad-A-pca_2&3.json",
+                "displayName": "PAD A PCA 2 & 3"
+            },
+            {
+                "filename": "Pad-A-pca_2&4.json",
+                "displayName": "PAD A PCA 2 & 4"
+            },
+            {
+                "filename": "Pad-A-pca_3&4.json",
+                "displayName": "PAD A PCA 3 & 4"
+            },
+            {
+                "filename": "Pad-B-pca_1&2.json",
+                "displayName": "PAD B PCA 1 & 2"
+            },
+            {
+                "filename": "Pad-B-pca_1&3.json",
+                "displayName": "PAD B PCA 1 & 3"
+            },
+            {
+                "filename": "Pad-B-pca_1&4.json",
+                "displayName": "PAD B PCA 1 & 4"
+            },
+            {
+                "filename": "Pad-B-pca_2&3.json",
+                "displayName": "PAD B PCA 2 & 3"
+            },
+            {
+                "filename": "Pad-B-pca_2&4.json",
+                "displayName": "PAD B PCA 2 & 4"
+            },
+            {
+                "filename": "Pad-B-pca_3&4.json",
+                "displayName": "PAD B PCA 3 & 4"
+            },
+            {
+                "filename": "Pad-C-pca_1&2.json",
+                "displayName": "PAD C"
+            }
+        ]
+    }
 ]

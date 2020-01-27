@@ -13,9 +13,12 @@ def main():
     topLevelStructure = json.load(open(TOP_LEVEL_STRUCTURE_FILENAME))
 
     for filename in os.listdir(IN_FOLDER):
+        print('Processing File: ' + filename)
         baseName, extension = os.path.splitext(filename)
         if extension in {'.txt', '.csv'}:
+            print('\tAdding new JSON file')
             addFile(IN_FOLDER + filename, topLevelStructure)
+            print('\tMoving file to processed folder')
             shutil.move(IN_FOLDER + filename, PROCESSED_FOLDER + filename)
 
     saveTopLevelStructure(topLevelStructure)
@@ -27,18 +30,23 @@ def saveTopLevelStructure(topLevelStructure: List) -> None:
     return
 
 def addFile(filename: str, topLevelStructure: List) -> None:
-    baseName: str = filename.split('.')[0]
-    datasetName,  projectionDisplayName = baseName.split('_')
+    baseName: str = os.path.basename(filename)
+    baseNameNoExt = baseName.split('.')[0]
+    datasetName,  projectionDisplayName = baseNameNoExt.split('*')
     datasetObj = findDataset(datasetName, topLevelStructure)
     folderName = datasetObj['folderName']
     projectionFilename = findFilename(projectionDisplayName, datasetObj)
 
-    csvFile = open(IN_FOLDER + filename, 'rt')
+    csvFile = open(IN_FOLDER + baseName, 'rt')
     count = 0
-    for line in csvFile.readline():
-         count += 1
+    line = csvFile.readline()
+    while line:
+        line = csvFile.readline()
+        count += 1
+        
+    print(count)
     csvFile.close()
-    csvFile = open(IN_FOLDER + filename, 'rt')
+    csvFile = open(IN_FOLDER + baseName, 'rt')
     csvToJson(csvFile, count, folderName + "/" + projectionFilename)
     return
 
@@ -50,13 +58,16 @@ def findDataset(displayName: str, topLevelStructure: List) -> Dict:
     newDataset['displayName'] = displayName
     folderName = displayName
     index = 2
-    while os.path.exists(displayName):
+    while os.path.exists(folderName):
         folderName = displayName + " (" + str(index) + ")"
         index += 1
+    os.mkdir(folderName)
+    # TODO - URL encode the folderName
     newDataset['folderName'] = folderName
     newDataset['imageWidth'] = 80
     newDataset['imageHeight'] = 80
     newDataset['projectionList'] = []
+    topLevelStructure.append(newDataset)
     printNewFolderMessage(folderName)
     return newDataset
 
@@ -120,7 +131,7 @@ def csvToJson(csvFile, numRows: int, outFilename: str) -> None:
         line = csvFile.readline()
 
     outFile = open(outFilename, 'w')
-    outFile.write(json.dumps(jsonList))
+    outFile.write(json.dumps(jsonList, indent=4))
     return
 
 if __name__ == "__main__":
