@@ -44,6 +44,38 @@
         ]
     },
     {
+        "displayName": "Particles (3)",
+        "folderName": "Particles%20%283%29",
+        "imageWidth": 270,
+        "imageHeight": 90,
+        "projectionList": [
+            {
+                "displayName": "All",
+                "filename": "All.json"
+            },
+            {
+                "displayName": "Scattering",
+                "filename": "Scattering.json"
+            },
+            {
+                "displayName": "Avg_Field",
+                "filename": "Avg_Field.json"
+            },
+            {
+                "displayName": "Absorption",
+                "filename": "Absorption.json"
+            },
+            {
+                "displayName": "Extinction",
+                "filename": "Extinction.json"
+            },
+            {
+                "displayName": "Max_Field",
+                "filename": "Max_Field.json"
+            }
+        ]
+    },
+    {
         "folderName": "fullParticle",
         "displayName": "Particle - All",
         "imageWidth": 270,
