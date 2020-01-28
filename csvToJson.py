@@ -2,6 +2,7 @@ from typing import List, IO, TextIO, Dict
 import json
 import os
 import shutil
+import urllib.parse
 
 IN_FOLDER: str = './in/'
 TOP_LEVEL_STRUCTURE_FILENAME: str = 'examples.json'
@@ -32,7 +33,7 @@ def addFile(filename: str, topLevelStructure: List) -> None:
     baseNameNoExt = baseName.split('.')[0]
     datasetName,  projectionDisplayName = baseNameNoExt.split('*')
     datasetObj = findDataset(datasetName, topLevelStructure)
-    folderName = datasetObj['folderName']
+    folderName = urllib.parse.unquote_plus(datasetObj['folderName'])
     projectionFilename = findFilename(projectionDisplayName, datasetObj)
 
     csvFile = open(IN_FOLDER + baseName, 'rt')
@@ -60,6 +61,7 @@ def findDataset(displayName: str, topLevelStructure: List) -> Dict:
         index += 1
     os.mkdir(folderName)
     # TODO - URL encode the folderName
+    folderName = urllib.parse.quote_plus(folderName)
     newDataset['folderName'] = folderName
     newDataset['imageWidth'] = 80
     newDataset['imageHeight'] = 80
@@ -72,7 +74,7 @@ def findFilename(displayName: str, datasetObj: Dict) -> str:
     folderName = datasetObj['folderName']
     for projection in datasetObj['projectionList']:
         if projection['displayName'] == displayName:
-            return projection['filename']
+            return urllib.parse.unquote_plus(projection['filename'])
     newProj = {}
     newProj['displayName'] = displayName
     filename = displayName
@@ -81,7 +83,7 @@ def findFilename(displayName: str, datasetObj: Dict) -> str:
         filename = displayName + " (" + str(index) + ").json"
         index += 1
     filename = filename + ".json"
-    newProj['filename'] = filename
+    newProj['filename'] = urllib.parse.quote_plus(filename)
     datasetObj['projectionList'].append(newProj)
     return filename
 
