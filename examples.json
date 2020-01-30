@@ -46,8 +46,8 @@
     {
         "displayName": "Particles (3)",
         "folderName": "Particles%20%283%29",
-        "imageWidth": 270,
-        "imageHeight": 90,
+        "imageWidth": 256,
+        "imageHeight": 64,
         "projectionList": [
             {
                 "displayName": "All",
