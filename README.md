@@ -35,6 +35,7 @@ So for the "Particles - All_L1 [64].csv" example, the first 5 lines of the file
 could look like the following.
 
 x,y,max_field,avg_field,scattering,extinction,absorption
+
 3.87372,1.40561,3.34469,2.05705,-33.3863,-31.7639,-31.9838
 -2.92122,-0.209223,1.02112,0.399764,-40.7863,-38.0932,-38.1633
 -1.96136,-0.0598162,1.31549,0.569668,-38.251,-37.445,-38.0368
