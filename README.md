@@ -5,7 +5,7 @@ update the JSON files appropriately.
 
 
 
-dataset*projection.csv
+    dataset*projection.csv
 
 
 dataset -
@@ -34,9 +34,8 @@ column 3+ - any attribute that you want to visualize. This can be seen in the
 So for the "Particles - All_L1 [64].csv" example, the first 5 lines of the file
 could look like the following.
 
-x,y,max_field,avg_field,scattering,extinction,absorption
-
-3.87372,1.40561,3.34469,2.05705,-33.3863,-31.7639,-31.9838
--2.92122,-0.209223,1.02112,0.399764,-40.7863,-38.0932,-38.1633
--1.96136,-0.0598162,1.31549,0.569668,-38.251,-37.445,-38.0368
-2.6516,-0.143876,2.65261,1.28398,-33.8529,-31.7579,-31.8892
+    x,y,max_field,avg_field,scattering,extinction,absorption
+    3.87372,1.40561,3.34469,2.05705,-33.3863,-31.7639,-31.9838
+    -2.92122,-0.209223,1.02112,0.399764,-40.7863,-38.0932,-38.1633
+    -1.96136,-0.0598162,1.31549,0.569668,-38.251,-37.445,-38.0368
+    2.6516,-0.143876,2.65261,1.28398,-33.8529,-31.7579,-31.8892
