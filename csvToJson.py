@@ -31,7 +31,7 @@ def saveTopLevelStructure(topLevelStructure: List) -> None:
 def addFile(filename: str, topLevelStructure: List) -> None:
     baseName: str = os.path.basename(filename)
     baseNameNoExt = baseName.split('.')[0]
-    datasetName,  projectionDisplayName = baseNameNoExt.split('*')
+    datasetName,  projectionDisplayName = baseNameNoExt.split('^')
     datasetObj = findDataset(datasetName, topLevelStructure)
     folderName = urllib.parse.unquote(datasetObj['folderName'])
     projectionFilename = findFilename(projectionDisplayName, datasetObj)

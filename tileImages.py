@@ -21,7 +21,7 @@ for i in range(len(imageFiles)):
 	x = i % numImageW
 	y = math.floor(i / numImageW)
 
-	imageFilename = imageFiles[i];
+	imageFilename = imageFiles[i]
 	smallImg = Image.open(imageDir + imageFilename)
 	top = y * smallH
 	left = x * smallW
