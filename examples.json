@@ -94,5 +94,17 @@
                 "filename": "Extinction.json"
             }
         ]
+    },
+    {
+        "displayName": "Particles (6)",
+        "folderName": "Particles%20%286%29",
+        "imageWidth": 256,
+        "imageHeight": 64,
+        "projectionList": [
+            {
+                "displayName": "All_Performance",
+                "filename": "All_Performance.json"
+            }
+        ]
     }
 ]
