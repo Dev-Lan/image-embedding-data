@@ -106,5 +106,17 @@
                 "filename": "All_Performance.json"
             }
         ]
+    },
+    {
+        "displayName": "Particles (7)",
+        "folderName": "Particles%20%287%29",
+        "imageWidth": 256,
+        "imageHeight": 64,
+        "projectionList": [
+            {
+                "displayName": "All_Performance",
+                "filename": "All_Performance.json"
+            }
+        ]
     }
 ]
