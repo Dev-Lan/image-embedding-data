@@ -128,6 +128,30 @@
             {
                 "displayName": "All_Performance",
                 "filename": "All_Performance.json"
+            },
+            {
+                "displayName": "PCA_1-2",
+                "filename": "PCA_1-2.json"
+            },
+            {
+                "displayName": "PCA_1-3",
+                "filename": "PCA_1-3.json"
+            },
+            {
+                "displayName": "PCA_1-4",
+                "filename": "PCA_1-4.json"
+            },
+            {
+                "displayName": "PCA_2-3",
+                "filename": "PCA_2-3.json"
+            },
+            {
+                "displayName": "PCA_2-4",
+                "filename": "PCA_2-4.json"
+            },
+            {
+                "displayName": "PCA_3-4",
+                "filename": "PCA_3-4.json"
             }
         ]
     }
