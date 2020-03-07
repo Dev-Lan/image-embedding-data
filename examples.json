@@ -154,5 +154,17 @@
                 "filename": "PCA_3-4.json"
             }
         ]
+    },
+    {
+        "displayName": "Particles CNN (1)",
+        "folderName": "Particles%20CNN%20%281%29",
+        "imageWidth": 256,
+        "imageHeight": 64,
+        "projectionList": [
+            {
+                "displayName": "All_Performance",
+                "filename": "All_Performance.json"
+            }
+        ]
     }
 ]
