@@ -166,5 +166,17 @@
                 "filename": "All_Performance.json"
             }
         ]
+    },
+    {
+        "displayName": "Particles Clustered (1)",
+        "folderName": "Particles%20Clustered%20%281%29",
+        "imageWidth": 256,
+        "imageHeight": 64,
+        "projectionList": [
+            {
+                "displayName": "All_Performance",
+                "filename": "All_Performance.json"
+            }
+        ]
     }
 ]
