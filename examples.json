@@ -156,6 +156,18 @@
         ]
     },
     {
+        "displayName": "Particles (9)",
+        "folderName": "Particles%20%289%29",
+        "imageWidth": 256,
+        "imageHeight": 64,
+        "projectionList": [
+            {
+                "displayName": "All_Performance",
+                "filename": "All_Performance.json"
+            }
+        ]
+    },
+    {
         "displayName": "Particles CNN (1)",
         "folderName": "Particles%20CNN%20%281%29",
         "imageWidth": 256,
