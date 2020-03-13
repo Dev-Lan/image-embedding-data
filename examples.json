@@ -204,6 +204,30 @@
         ]
     },
     {
+        "displayName": "Particles CNN (2)",
+        "folderName": "Particles%20CNN%20%282%29",
+        "imageWidth": 256,
+        "imageHeight": 64,
+        "projectionList": [
+            {
+                "displayName": "All_Performance",
+                "filename": "All_Performance.json"
+            }
+        ]
+    },
+    {
+        "displayName": "Particles CNN (3)",
+        "folderName": "Particles%20CNN%20%283%29",
+        "imageWidth": 256,
+        "imageHeight": 64,
+        "projectionList": [
+            {
+                "displayName": "All_Performance",
+                "filename": "All_Performance.json"
+            }
+        ]
+    },
+    {
         "displayName": "Particles Clustered (1)",
         "folderName": "Particles%20Clustered%20%281%29",
         "imageWidth": 256,
