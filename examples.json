@@ -249,6 +249,7 @@
         "folderName": "Particles%20Clustered%20%281%29",
         "imageWidth": 256,
         "imageHeight": 64,
+        "hasDistanceMatrix": true,
         "projectionList": [
             {
                 "displayName": "All_Performance",
