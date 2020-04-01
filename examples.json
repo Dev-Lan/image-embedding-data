@@ -4,7 +4,7 @@
         "displayName": "Test",
         "imageWidth": 80,
         "imageHeight": 80,
-        "hasDistanceMatrix": true,
+        "distanceMatrixFilename": "distanceMatrix.bin",
         "projectionList": [
             {
                 "filename": "pointList.json",
@@ -173,7 +173,7 @@
         "folderName": "Particles%20%289%29",
         "imageWidth": 256,
         "imageHeight": 64,
-        "hasDistanceMatrix": true,
+        "distanceMatrixFilename": "../shared/particles1987_distanceMatrix.bin",
         "projectionList": [
             {
                 "displayName": "All_Performance",
@@ -186,7 +186,7 @@
         "folderName": "Particles%20CNN%20%281%29",
         "imageWidth": 256,
         "imageHeight": 64,
-        "hasDistanceMatrix": true,
+        "distanceMatrixFilename": "../shared/particles1987_distanceMatrix.bin",
         "projectionList": [
             {
                 "displayName": "All_Performance",
@@ -223,7 +223,7 @@
         "folderName": "Particles%20CNN%20%282%29",
         "imageWidth": 256,
         "imageHeight": 64,
-        "hasDistanceMatrix": true,
+        "distanceMatrixFilename": "../shared/particles1987_distanceMatrix.bin",
         "projectionList": [
             {
                 "displayName": "All_Performance",
@@ -236,7 +236,7 @@
         "folderName": "Particles%20CNN%20%283%29",
         "imageWidth": 256,
         "imageHeight": 64,
-        "hasDistanceMatrix": true,
+        "distanceMatrixFilename": "../shared/particles1987_distanceMatrix.bin",
         "projectionList": [
             {
                 "displayName": "All_Performance",
@@ -249,7 +249,7 @@
         "folderName": "Particles%20Clustered%20%281%29",
         "imageWidth": 256,
         "imageHeight": 64,
-        "hasDistanceMatrix": true,
+        "distanceMatrixFilename": "distanceMatrix.bin",
         "projectionList": [
             {
                 "displayName": "All_Performance",
