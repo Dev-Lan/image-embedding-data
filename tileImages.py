@@ -10,7 +10,10 @@ imageLookup.write("{\n")
 outName = "./tiledImg.png"
 
 imageFiles = os.listdir(imageDir)
+# print(imageFiles)
 imageFiles = [file for file in imageFiles if file[-4:] == ".png"]
+# imageFiles.sort()
+# print(imageFiles)
 numImages = len(imageFiles)
 numImageW = round(numImages**0.5)
 numImageH = math.ceil(numImages / float(numImageW))
