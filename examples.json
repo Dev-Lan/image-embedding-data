@@ -221,8 +221,8 @@
     {
         "displayName": "Particles CNN (2)",
         "folderName": "Particles%20CNN%20%282%29",
-        "imageWidth": 256,
-        "imageHeight": 64,
+        "imageWidth": 270,
+        "imageHeight": 90,
         "distanceMatrixFilename": "../shared/particles1987_distanceMatrix.bin",
         "projectionList": [
             {
