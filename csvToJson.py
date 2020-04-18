@@ -10,13 +10,13 @@ PROCESSED_FOLDER: str = './processed/'
 
 
 def main():
-    filename = 'justPCA.csv'
+    # filename = 'Particles (4)^Test-400.csv'
     topLevelStructure = json.load(open(TOP_LEVEL_STRUCTURE_FILENAME))
 
     for filename in os.listdir(IN_FOLDER):
-        print('Processing File: ' + filename)
         baseName, extension = os.path.splitext(filename)
         if extension in {'.txt', '.csv'}:
+            print('Processing File: ' + filename)
             addFile(IN_FOLDER + filename, topLevelStructure)
             shutil.move(IN_FOLDER + filename, PROCESSED_FOLDER + filename)
 

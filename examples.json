@@ -256,5 +256,17 @@
                 "filename": "All_Performance.json"
             }
         ]
+    },
+    {
+        "displayName": "Particles CNN (4)",
+        "folderName": "Particles%20CNN%20%284%29",
+        "imageWidth": 144,
+        "imageHeight": 156,
+        "projectionList": [
+            {
+                "displayName": "Test-400",
+                "filename": "Test-400.json"
+            }
+        ]
     }
 ]

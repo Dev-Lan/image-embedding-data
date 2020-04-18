@@ -19,7 +19,7 @@ from os import linesep
 baseFolder = '/Users/devlan/Projects/web/Dev-Lan.github.io/research/image-embedding-viz/myData/image-embedding-data/'
 inFolder = baseFolder + 'in/'
 outFolder = baseFolder + 'out/'
-csvFilename = 'Para_testcase_devin.csv'
+csvFilename = 'fromPrince/particles_parameters.csv'
 # csvFilename = 'particles_parameters_devin.csv'
 
 renderLarge = False
