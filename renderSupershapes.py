@@ -8,15 +8,19 @@ import numpy as np
 import matplotlib.tri as mtri
 import trimesh
 import pyrender
+import PIL
 from PIL import Image
 from numpy.linalg import inv
 
 
 from os import linesep
 
-inFolder = './in/'
-outFolder = './out/'
-csvFilename = 'exampleShapeParams.csv'
+
+baseFolder = '/Users/devlan/Projects/web/Dev-Lan.github.io/research/image-embedding-viz/myData/image-embedding-data/'
+inFolder = baseFolder + 'in/'
+outFolder = baseFolder + 'out/'
+csvFilename = 'Para_testcase_devin.csv'
+# csvFilename = 'particles_parameters_devin.csv'
 
 renderLarge = False
 interactiveView = False
@@ -44,7 +48,7 @@ def main():
     cameraObj = pyrender.PerspectiveCamera(yfov=np.pi / 3.0)
 
     # camera position
-    camPos = np.array([4, -4, 2.5])
+    camPos = np.array([3.25, -4.25, 2.5])
     origin = np.array([0,0,0])
     upVec = np.array([0,0,1])
     camera_pose, leftVec = lookat(camPos, origin, upVec)
@@ -67,7 +71,7 @@ def main():
         scene.add(dirLightObj, pose=lightPose)
 
     # for implicit resolution
-    unitCubeSize = 3
+    unitCubeSize = 6
     nGridPointsPerDimension = 200
 
 
@@ -75,18 +79,18 @@ def main():
         bigImgW,bigImgH = 960, 720
         smallImgSize = 320
     else:
-        bigImgW,bigImgH = 96, 72
-        smallImgSize = 32
+        bigImgW, bigImgH = 144, 108 #96, 72
+        smallImgSize = 48 #32
 
     totalImgW, totalImgH = bigImgW, bigImgH + smallImgSize
     r = pyrender.OffscreenRenderer(bigImgW, bigImgH)
 
     smallSize = (smallImgSize, smallImgSize)
-    sliceImg = Image.new('RGB', smallSize)
+    sliceImg = Image.new('RGB', (nGridPointsPerDimension, nGridPointsPerDimension))
 
     # render all the particles
     for rowIndex in range(1, len(rows)):
-        print('shape %i / %i' % (rowIndex + 1, len(rows)), end='\r')
+        print('shape %i / %i' % (rowIndex, len(rows) - 1), end='\r')
         row = rows[rowIndex]
         row = row.split(',')
         m = float(row[m_i])
@@ -96,7 +100,7 @@ def main():
         a = float(row[a_i])
         b = float(row[b_i])
 
-        X, Y, Z, triIndices = superformula3D(m, n1, n2, n3, a, b, 50000)
+        X, Y, Z, triIndices = superformula3D(m, n1, n2, n3, a, b, 100000)
         verts = np.column_stack((X,Y,Z))
 
         shapeMesh = trimesh.Trimesh(vertices=verts, faces=triIndices)
@@ -118,28 +122,33 @@ def main():
             pyrender.Viewer(scene, use_raymond_lighting=True)
         
 
-        pilImg = Image.new('RGB',(totalImgW, totalImgH))
         
         color, depth = r.render(scene)
 
         scene.remove_node(meshNode)
 
+        pilImg = Image.new('RGB',(totalImgW, totalImgH))
         color = [(pixel[0], pixel[1], pixel[2]) for pixel in color.reshape(-1, 3)]
         pilImg.putdata(color)
         # scene.clear()
 
         # add slices:
-        grid = supershape3dImplicit(unitCubeSize, smallImgSize, a, b, m, n1, n2, n3)
+        grid = supershape3dImplicit(unitCubeSize, nGridPointsPerDimension, a, b, m, n1, n2, n3)
         # binaryGrid = np.where(grid >=0, 1, 0)
         minVal = np.min(grid)
         maxVal = np.max(grid)
-        midIndex = math.floor(smallImgSize / 2.0)
+        midIndex = math.floor(nGridPointsPerDimension / 2.0)
 
-        for index, view in enumerate([grid[:,:,midIndex], grid[:,midIndex,:].T, grid[midIndex,:,:].T]):
-            flatData = [getColor(x, minVal, maxVal) for x in view.flatten()]
+
+        # slices = [grid[:,:,midIndex], grid[midIndex,:,:].T, grid[:,midIndex,:].T]
+        outlines = [getOutline(grid, 0), getOutline(grid, 1), getOutline(grid, 2)]
+        backColors = [(255, 222, 222), (222,255,222), (222,222,255)]
+
+        for index, view in enumerate(outlines):
+            flatData = [colorBinary(x, backColors[index]) for x in view.flatten()]
             sliceImg.putdata(flatData)
             topLeft = (index * smallImgSize, bigImgH)
-            pilImg.paste(sliceImg, topLeft)
+            pilImg.paste(sliceImg.resize((smallImgSize, smallImgSize), resample = PIL.Image.BILINEAR), topLeft)
 
         pilImg.save(outFolder + filename)
         
@@ -173,7 +182,7 @@ def supershape3dImplicit(unitCubeSize, nGridPointsPerDimension, a, b, m, n1, n2,
     [x,y,z] = np.meshgrid(x,y,z)
     theta = np.arctan2(y, x)
     r_theta = superformula2D(m, n1, n2, n3, a, b, theta)
-    theta2 = np.arctan(y/x)
+    # theta2 = np.arctan(y/x)
 
 
     phi1 = np.arctan(z * r_theta * np.sin(theta)/ y)
@@ -188,7 +197,26 @@ def supershape3dImplicit(unitCubeSize, nGridPointsPerDimension, a, b, m, n1, n2,
 
 def superformula2D(m, n1, n2, n3, a, b, theta):
     r = abs((1 / a) * np.cos(m * theta / 4.0))**n2  +  abs((1 / b) * np.sin(m * theta / 4.0))**n3
-    return r**(-1 / n3)
+    return r**(-1 / n1)
+
+def getOutline(grid, view):
+    size = np.shape(grid)[0]
+    output = np.array([[0 for _ in range(size)] for _ in range(size) ])
+    for x in range(size):
+        for y in range(size):
+
+            for depth in range(size):
+                if view == 0:
+                    val = grid[x,y, depth]
+                elif view == 1:
+                    val = grid[depth, y, x]
+                else:
+                    val = grid[y, depth, x]
+                if val >= 0:
+                    output[x, y] = 1
+                    break
+    return output
+
 
 def getColor(val, minVal, maxVal):
     if val == 0:
@@ -198,6 +226,11 @@ def getColor(val, minVal, maxVal):
         return (255, 0, 0)
 
     return (0, 0, int(255 * val / float(minVal)))
+
+def colorBinary(val, back=(255,255,255), fore=(0,0,0)):
+    if val == 0:
+        return back
+    return fore
 
 
 def plotHeatmap(grid):

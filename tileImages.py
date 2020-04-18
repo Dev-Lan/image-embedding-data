@@ -1,8 +1,8 @@
 from PIL import Image, ImageDraw
 import os, math
 
-imageDir = "./tmp/" # todo -it would be nice to get this from the command line
-(smallW, smallH) = (96, 104) # todo - get image size
+imageDir = "./out/" # todo -it would be nice to get this from the command line
+(smallW, smallH) = (144, 156) # todo - get image size
 
 
 imageLookup = open("./imageLookup.json", "w")
