@@ -262,6 +262,7 @@
         "folderName": "Particles%20CNN%20%284%29",
         "imageWidth": 144,
         "imageHeight": 156,
+        "distanceMatrixFilename": "distanceMatrix.bin",
         "projectionList": [
             {
                 "displayName": "Test-400",
