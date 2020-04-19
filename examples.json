@@ -182,6 +182,19 @@
         ]
     },
     {
+        "displayName": "Particles (10)",
+        "folderName": "Particles%20%2810%29",
+        "imageWidth": 144,
+        "imageHeight": 156,
+        "distanceMatrixFilename": "distanceMatrix.bin",
+        "projectionList": [
+            {
+                "displayName": "Test-400",
+                "filename": "Test-400.json"
+            }
+        ]
+    },
+    {
         "displayName": "Particles CNN (1)",
         "folderName": "Particles%20CNN%20%281%29",
         "imageWidth": 96,
@@ -254,19 +267,6 @@
             {
                 "displayName": "All_Performance",
                 "filename": "All_Performance.json"
-            }
-        ]
-    },
-    {
-        "displayName": "Particles CNN (4)",
-        "folderName": "Particles%20CNN%20%284%29",
-        "imageWidth": 144,
-        "imageHeight": 156,
-        "distanceMatrixFilename": "distanceMatrix.bin",
-        "projectionList": [
-            {
-                "displayName": "Test-400",
-                "filename": "Test-400.json"
             }
         ]
     }
