@@ -17,9 +17,9 @@ from os import linesep
 
 
 baseFolder = '/Users/devlan/Projects/web/Dev-Lan.github.io/research/image-embedding-viz/myData/image-embedding-data/'
-inFolder = baseFolder + 'in/'
+inFolder = baseFolder + 'in/shapeParams/'
 outFolder = baseFolder + 'out/'
-csvFilename = 'fromPrince/particles_parameters.csv'
+csvFilename = 'particles_parameters.csv'
 # csvFilename = 'particles_parameters_devin.csv'
 
 renderLarge = False
@@ -72,7 +72,7 @@ def main():
 
     # for implicit resolution
     unitCubeSize = 6
-    nGridPointsPerDimension = 200
+    nGridPointsPerDimension = 48
 
 
     if renderLarge:
@@ -140,11 +140,11 @@ def main():
         midIndex = math.floor(nGridPointsPerDimension / 2.0)
 
 
-        # slices = [grid[:,:,midIndex], grid[midIndex,:,:].T, grid[:,midIndex,:].T]
+        slices = [grid[:,:,midIndex], grid[midIndex,:,:].T, grid[:,midIndex,:].T]
         outlines = [getOutline(grid, 0), getOutline(grid, 1), getOutline(grid, 2)]
         backColors = [(255, 222, 222), (222,255,222), (222,222,255)]
 
-        for index, view in enumerate(outlines):
+        for index, view in enumerate(slices):
             flatData = [colorBinary(x, backColors[index]) for x in view.flatten()]
             sliceImg.putdata(flatData)
             topLeft = (index * smallImgSize, bigImgH)
@@ -228,7 +228,7 @@ def getColor(val, minVal, maxVal):
     return (0, 0, int(255 * val / float(minVal)))
 
 def colorBinary(val, back=(255,255,255), fore=(0,0,0)):
-    if val == 0:
+    if val <= 0:
         return back
     return fore
 

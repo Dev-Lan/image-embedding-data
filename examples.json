@@ -258,6 +258,18 @@
         ]
     },
     {
+        "displayName": "Particles CNN (4)",
+        "folderName": "Particles%20CNN%20%284%29",
+        "imageWidth": 144,
+        "imageHeight": 156,
+        "projectionList": [
+            {
+                "displayName": "Full 5435",
+                "filename": "Full%205435.json"
+            }
+        ]
+    },
+    {
         "displayName": "Particles Clustered (1)",
         "folderName": "Particles%20Clustered%20%281%29",
         "imageWidth": 256,
