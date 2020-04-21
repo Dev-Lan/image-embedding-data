@@ -266,6 +266,30 @@
             {
                 "displayName": "Full 5435",
                 "filename": "Full%205435.json"
+            },
+            {
+                "displayName": "PCA 1-2",
+                "filename": "PCA%201-2.json"
+            },
+            {
+                "displayName": "PCA 1-3",
+                "filename": "PCA%201-3.json"
+            },
+            {
+                "displayName": "PCA 1-4",
+                "filename": "PCA%201-4.json"
+            },
+            {
+                "displayName": "PCA 2-3",
+                "filename": "PCA%202-3.json"
+            },
+            {
+                "displayName": "PCA 2-4",
+                "filename": "PCA%202-4.json"
+            },
+            {
+                "displayName": "PCA 3-4",
+                "filename": "PCA%203-4.json"
             }
         ]
     },
