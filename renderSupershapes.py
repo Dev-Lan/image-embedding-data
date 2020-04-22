@@ -24,6 +24,7 @@ csvFilename = 'particles_parameters.csv'
 
 renderLarge = False
 interactiveView = False
+renderFaster = False
 
 def main():
 
@@ -45,34 +46,22 @@ def main():
     goldMaterial = pyrender.MetallicRoughnessMaterial(baseColorFactor=[ 1.0, 0.766, 0.336, 1.0 ], roughnessFactor=.25, metallicFactor=1, emissiveFactor=0)
     scene = pyrender.Scene()
 
-    cameraObj = pyrender.PerspectiveCamera(yfov=np.pi / 3.0)
-
     # camera position
-    camPos = np.array([3.25, -4.25, 2.5])
+    # cameraObj = pyrender.PerspectiveCamera(yfov=np.pi / 3.0)
+    mag = 5
+    cameraObj = pyrender.OrthographicCamera(mag, mag * .75)
+
+    # camPos = np.array([3.25, -4.25, 2.5])
+    camPos = 2*np.array([3.25, -4.25, 2.5])
     origin = np.array([0,0,0])
     upVec = np.array([0,0,1])
-    camera_pose, leftVec = lookat(camPos, origin, upVec)
-    camera_pose = np.array(inv(camera_pose))
-    scene.add(cameraObj, pose=camera_pose)
-
-    # lighting
-    scene.ambient_light = .01
-    dirLightObj = pyrender.DirectionalLight(color=[1,1,1], intensity=1000)
-    coneLightObj = pyrender.SpotLight(color=[1,1,1], intensity=3000, innerConeAngle=(np.pi/8.0), outerConeAngle=(np.pi / 2.0))
-
-    spotlightPositions = [[-.1, -.1, 10], np.array([0, 0, 50]) - 8*leftVec]
-    headlampOffset = 20.0
-    spotlightPositions.append(camPos + headlampOffset * leftVec + 1.5 * upVec)
-    spotlightPositions.append(camPos - headlampOffset * leftVec + 1.2 * upVec)
-
-    for lightPos in spotlightPositions:
-        matrix, leftVec = lookat(lightPos, origin, upVec)
-        lightPose = np.array(inv(matrix))
-        scene.add(dirLightObj, pose=lightPose)
 
     # for implicit resolution
     unitCubeSize = 6
-    nGridPointsPerDimension = 48
+    if renderFaster:
+        nGridPointsPerDimension = 48
+    else:
+        nGridPointsPerDimension = 192
 
 
     if renderLarge:
@@ -87,6 +76,8 @@ def main():
 
     smallSize = (smallImgSize, smallImgSize)
     sliceImg = Image.new('RGB', (nGridPointsPerDimension, nGridPointsPerDimension))
+
+
 
     # render all the particles
     for rowIndex in range(1, len(rows)):
@@ -104,6 +95,29 @@ def main():
         verts = np.column_stack((X,Y,Z))
 
         shapeMesh = trimesh.Trimesh(vertices=verts, faces=triIndices)
+
+
+        objCenter = shapeMesh.centroid
+
+        # shift camera position to center object
+        camera_pose, leftVec = lookat(camPos + objCenter, origin + objCenter, upVec)
+        camera_pose = np.array(inv(camera_pose))
+        cameraNode = scene.add(cameraObj, pose=camera_pose)
+
+        # lighting
+        scene.ambient_light = .01
+        dirLightObj = pyrender.DirectionalLight(color=[1,1,1], intensity=1000)
+        coneLightObj = pyrender.SpotLight(color=[1,1,1], intensity=3000, innerConeAngle=(np.pi/8.0), outerConeAngle=(np.pi / 2.0))
+
+        spotlightPositions = [[-.1, -.1, 10], np.array([0, 0, 50]) - 8*leftVec]
+        headlampOffset = 20.0
+        spotlightPositions.append(camPos + headlampOffset * leftVec + 1.5 * upVec)
+        spotlightPositions.append(camPos - headlampOffset * leftVec + 1.2 * upVec)
+
+        for lightPos in spotlightPositions:
+            matrix, leftVec = lookat(lightPos, origin, upVec)
+            lightPose = np.array(inv(matrix))
+            scene.add(dirLightObj, pose=lightPose)
 
 
         if img_i >= 0:
@@ -125,12 +139,14 @@ def main():
         
         color, depth = r.render(scene)
 
-        scene.remove_node(meshNode)
+        # clean up since done rendering this object
+        # scene.remove_node(meshNode)
+        # scene.remove_node(cameraNode)
+        scene.clear()
 
         pilImg = Image.new('RGB',(totalImgW, totalImgH))
         color = [(pixel[0], pixel[1], pixel[2]) for pixel in color.reshape(-1, 3)]
         pilImg.putdata(color)
-        # scene.clear()
 
         # add slices:
         grid = supershape3dImplicit(unitCubeSize, nGridPointsPerDimension, a, b, m, n1, n2, n3)
@@ -140,11 +156,15 @@ def main():
         midIndex = math.floor(nGridPointsPerDimension / 2.0)
 
 
-        slices = [grid[:,:,midIndex], grid[midIndex,:,:].T, grid[:,midIndex,:].T]
-        outlines = [getOutline(grid, 0), getOutline(grid, 1), getOutline(grid, 2)]
+        if renderFaster:
+            # slices
+            orthoViews = [grid[:,:,midIndex], grid[midIndex,:,:].T, grid[:,midIndex,:].T]
+        else:
+            # silhouettes 
+            orthoViews = [getOutline(grid, 0), getOutline(grid, 1), getOutline(grid, 2)]
         backColors = [(255, 222, 222), (222,255,222), (222,222,255)]
 
-        for index, view in enumerate(slices):
+        for index, view in enumerate(orthoViews):
             flatData = [colorBinary(x, backColors[index]) for x in view.flatten()]
             sliceImg.putdata(flatData)
             topLeft = (index * smallImgSize, bigImgH)
