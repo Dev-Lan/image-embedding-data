@@ -25,6 +25,7 @@ csvFilename = 'particles_parameters.csv'
 renderLarge = False
 interactiveView = False
 renderFaster = False
+firstIndex = 1 # useful for rendering specific shape, or starting rendering where it was left off. Should be 1 if you want all.
 
 def main():
 
@@ -61,7 +62,7 @@ def main():
     if renderFaster:
         nGridPointsPerDimension = 48
     else:
-        nGridPointsPerDimension = 192
+        nGridPointsPerDimension = 96
 
 
     if renderLarge:
@@ -80,7 +81,7 @@ def main():
 
 
     # render all the particles
-    for rowIndex in range(1, len(rows)):
+    for rowIndex in range(firstIndex, len(rows)):
         print('shape %i / %i' % (rowIndex, len(rows) - 1), end='\r')
         row = rows[rowIndex]
         row = row.split(',')
