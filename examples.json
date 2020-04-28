@@ -247,8 +247,8 @@
     {
         "displayName": "Particles CNN (3)",
         "folderName": "Particles%20CNN%20%283%29",
-        "imageWidth": 270,
-        "imageHeight": 90,
+        "imageWidth": 256,
+        "imageHeight": 64,
         "distanceMatrixFilename": "../shared/particles1987_distanceMatrix.bin",
         "projectionList": [
             {
@@ -303,6 +303,18 @@
             {
                 "displayName": "All_Performance",
                 "filename": "All_Performance.json"
+            }
+        ]
+    },
+    {
+        "displayName": "Particles CNN (5)",
+        "folderName": "Particles%20CNN%20%285%29",
+        "imageWidth": 144,
+        "imageHeight": 156,
+        "projectionList": [
+            {
+                "displayName": "LatentSpace",
+                "filename": "LatentSpace.json"
             }
         ]
     }
