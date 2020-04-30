@@ -2,7 +2,7 @@ import array
 
 inFolder = './in/distMatrix/'
 
-with open(inFolder + 'distMat_testcase.csv', 'rt') as f:
+with open(inFolder + 'distanceMatrix.csv', 'rt') as f:
     rows = f.readlines()
     values = []
     for row in rows:
