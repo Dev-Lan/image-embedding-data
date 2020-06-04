@@ -1,12 +1,12 @@
 # image-embedding-data
 
-This file describes the format required to run csvToJson.py in order to
-update the JSON files appropriately.
 
+# csvToJson.py
+This script can be used to take input datasets as CSV files and update the json files used by the website.
 
+For an input csv file the name of the file is used to set the labels on the website.
 
     dataset^projection.csv
-
 
 dataset -
     The display name of the dataset. This appears in
@@ -18,7 +18,7 @@ projection -
     in the top right corner of the visualization. For
     example. "L1 [64]"
 
-In this example the full filename would be "Particles - All_L1 [64].csv"
+In this example the full filename would be "Particles - All^L1 [64].csv"
 
 The content of the file should be a csv file containing the following information.
 
@@ -27,9 +27,7 @@ the following.
 
 column 1  - the X positions for all the points.
 column 2  - the Y position for all the points.
-column 3+ - any attribute that you want to visualize. This can be seen in the
-            visualization in the top left, below the datasets, after the 
-            attribute label.
+column 3+ - any attribute that you want to visualize. That is, these options will be available for coloring the points in the scatterplot, filtering in the scatterplot, or sorting in the image list.
 
 So for the "Particles - All_L1 [64].csv" example, the first 5 lines of the file
 could look like the following.
