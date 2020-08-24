@@ -33,6 +33,10 @@
             {
                 "displayName": "PCA 3-4",
                 "filename": "PCA%203-4.json"
+            },
+            {
+                "displayName": "t-SNE",
+                "filename": "t-SNE.json"
             }
         ]
     }
