@@ -37,6 +37,10 @@
             {
                 "displayName": "t-SNE",
                 "filename": "t-SNE.json"
+            },
+            {
+                "displayName": "ISOMAP",
+                "filename": "ISOMAP.json"
             }
         ]
     }
