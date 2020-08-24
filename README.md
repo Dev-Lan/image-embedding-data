@@ -48,7 +48,7 @@ This file contains the list of datasets available on the website. This is not th
 | *folderName*      | The name of the folder that contains the actual dataset data. |
 | *imageWidth*      | The width in pixels of a single thumbnails. (all thumnails must be the same size) |
 | *imageHeight*      | The height in pixels of a single thumbnails. (all thumnails must be the same size) |
-| *distanceMatrixFilename*      | The path to the distance matrix .bin file. Since these are larged, if they are shared across datasets they should be placed in the _shared_ folder. |
+| *distanceMatrixFilename*      | The path to the distance matrix .bin file. Since these are large, if they are shared across datasets they should be placed in the _shared_ folder. |
 | *projectionList*      | The list of projections for the dataset. Each projection has two attributes, displayName and filename. The path is relative to the inside of folderName. |
 | *displayName* (projectionList)     | The name displayed on the website for this projection. |
 | *filename* (projectionList)     | The filename for the actual projection. Path is relative to the inside of folderName. |
