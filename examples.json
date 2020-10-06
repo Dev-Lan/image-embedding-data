@@ -41,6 +41,10 @@
             {
                 "displayName": "ISOMAP",
                 "filename": "ISOMAP.json"
+            },
+            {
+                "displayName": "PCA",
+                "filename": "PCA.json"
             }
         ]
     }
