@@ -49,6 +49,10 @@
             {
                 "displayName": "ISOMAP_",
                 "filename": "ISOMAP_.json"
+            },
+            {
+                "displayName": "Latent-Space",
+                "filename": "Latent-Space.json"
             }
         ]
     }
