@@ -45,10 +45,6 @@
             {
                 "displayName": "PCA",
                 "filename": "PCA.json"
-            },
-            {
-                "displayName": "Latent-Space",
-                "filename": "Latent-Space.json"
             }
         ]
     }
