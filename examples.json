@@ -49,6 +49,10 @@
             {
                 "displayName": "AutoEncoLatentSpace",
                 "filename": "AutoEncoLatentSpace.json"
+            },
+            {
+                "displayName": "AutoEncoLatentSpace1",
+                "filename": "AutoEncoLatentSpace1.json"
             }
         ]
     }
