@@ -49,10 +49,6 @@
             {
                 "displayName": "AutoEncoLatentSpace1-ELU",
                 "filename": "AutoEncoLatentSpace1-ELU.json"
-            },
-            {
-                "displayName": "AutoEncoLatentSpace2-SELU",
-                "filename": "AutoEncoLatentSpace2-SELU.json"
             }
         ]
     }
