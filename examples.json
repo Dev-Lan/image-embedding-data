@@ -45,14 +45,6 @@
             {
                 "displayName": "PCA",
                 "filename": "PCA.json"
-            },
-            {
-                "displayName": "AutoEncoLatentSpace1",
-                "filename": "AutoEncoLatentSpace1.json"
-            },
-            {
-                "displayName": "AutoEncoLatentSpace2",
-                "filename": "AutoEncoLatentSpace2.json"
             }
         ]
     }
