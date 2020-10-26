@@ -57,6 +57,10 @@
             {
                 "displayName": "AutoEncoLatentSpace2-SELU",
                 "filename": "AutoEncoLatentSpace2-SELU.json"
+            },
+            {
+                "displayName": "AutoEncoLatentSpace2-SELU_tSNE",
+                "filename": "AutoEncoLatentSpace2-SELU_tSNE.json"
             }
         ]
     }
